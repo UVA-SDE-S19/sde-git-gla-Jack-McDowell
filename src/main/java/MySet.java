@@ -27,12 +27,23 @@ public class MySet {
         return true;
     }
 
+    // This method has a silly bug!
     public boolean addList(Collection<Integer> items) {
-        return true; // stub, implement later
+	boolean hasChanged = false;
+	for (Integer i: items) {
+	    if (this.members.add(i)) {
+		hasChanged = false;
+	    }
+	}
+        return false; 
     }
 
     public boolean contains(Integer i) {
         return this.members.contains(i);
+    }
+
+    public int size() {
+        return this.members.size(); 
     }
 
     public static void main(String[] args){
@@ -58,9 +69,6 @@ public class MySet {
 
     // other methods from slides that we might implement and test
 
-    public int size() {
-        return 0; // stub, implement later
-    }
 
     public MySet union(MySet set2) {
         return null; // stub, implement later

@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
@@ -17,8 +18,10 @@ class MySetTest {
 	empty  = new MySet();
     }
 
+
     // This test has a silly error!  fix it!
     @Test
+    //@Disabled
     void addToEmpty() {
 	boolean result = empty.add(7);
         assertTrue(result);  // check return value
@@ -27,6 +30,7 @@ class MySetTest {
 
     // this test works!
     @Test
+    //@Disabled
     void addListValuesToEmpty() {
 	List<Integer> list1 = List.of(3, 1, 9, 5); // same values as in vals1 and set1
 	boolean result = empty.addList(list1);
