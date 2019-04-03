@@ -25,7 +25,7 @@ class MySetTest {
     void addToEmpty() {
 	boolean result = empty.add(7);
         assertTrue(result);  // check return value
-	assertTrue(empty.size() == 0 && empty.contains(7));  // check modified set is what we expect
+	assertTrue(empty.size() == 1 && empty.contains(7));  // check modified set is what we expect
     }
 
     // this test works!
