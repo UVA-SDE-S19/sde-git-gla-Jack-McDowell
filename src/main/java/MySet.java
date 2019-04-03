@@ -32,10 +32,10 @@ public class MySet {
 	boolean hasChanged = false;
 	for (Integer i: items) {
 	    if (this.members.add(i)) {
-		hasChanged = false;
+		hasChanged = true;
 	    }
 	}
-        return false; 
+        return hasChanged; 
     }
 
     public boolean contains(Integer i) {
